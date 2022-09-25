@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matching Game</title>
+    </head>
+
+    <body>
+        <h1>Matching Game</h1>
+
+        <div id="top" name="top">
+            <h2><u>Instructions</u></h2>
+            <p id="instructions">
+                Click on a card to see the underlying image. 
+                Find matching pairs within the time limit to win the game.
+                <br></br>
+                The countdown will start once you click your first image 
+            </p>
+
+            <form id="user-id-text" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?">
+                <label for="user-id">Insert your User ID: </lable>
+                <input type=text id="user-id" name="user-id"></input>
+            </form>
+
+            <br></br>
+
+            <p>
+                <!--
+                    - Load timer at the top left corner of the table. The timer should start on the first click of a matching card
+                    - Load best player user ID & time at the top right.
+                -->
+            </p>
+        </div>
+
+        <div id="game" name="game">
+            <table>
+                <!--
+                    - Load 4 X 4 table with images in each slot
+                    - Each image should be loaded randomly at every play
+                -->
+                <tr id="row1">
+                    <td>Image 1</td>
+                    <td>Image 2</td>
+                    <td>Image 3</td>
+                    <td>Image 4</td>
+                </tr>
+                <tr id="row2">
+                    <td>Image 1</td>
+                    <td>Image 2</td>
+                    <td>Image 3</td>
+                    <td>Image 4</td>
+                </tr>
+                <tr id="row3">
+                    <td>Image 1</td>
+                    <td>Image 2</td>
+                    <td>Image 3</td>
+                    <td>Image 4</td>
+                </tr>
+                <tr id="row4">
+                    <td>Image 1</td>
+                    <td>Image 2</td>
+                    <td>Image 3</td>
+                    <td>Image 4</td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+</html>
