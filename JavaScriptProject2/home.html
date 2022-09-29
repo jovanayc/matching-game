@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Matching Game</title>
+        <link rel="stylesheet" href="design.css">
+        <script type="text/javascript" src="matching-game.js"></script>
     </head>
 
     <body>
@@ -13,13 +15,15 @@
                 Click on a card to see the underlying image. 
                 Find matching pairs within the time limit to win the game.
                 <br></br>
-                The countdown will start once you click your first image 
+                The countdown will start once you click your "Start Game".
             </p>
 
-            <form id="user-id-text" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?">
+            <form id="user-id-text" > <!-- //PHP stuff// method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?"-->
                 <label for="user-id">Insert your User ID: </lable>
                 <input type=text id="user-id" name="user-id"></input>
             </form>
+
+            <button id="start-button" onclick="setTimeout(timer(), 100000)">Start Game</button><!-- NOT WORKING: Timer countdown-->
 
             <br></br>
 
@@ -32,34 +36,35 @@
         </div>
 
         <div id="game" name="game">
-            <table>
+            <table class="table" name="table" id="table">
                 <!--
                     - Load 4 X 4 table with images in each slot
                     - Each image should be loaded randomly at every play
                 -->
-                <tr id="row1">
-                    <td>Image 1</td>
-                    <td>Image 2</td>
-                    <td>Image 3</td>
-                    <td>Image 4</td>
+                
+                <tr class="table" name="tablename" id="row1" onclick="coverFunc();">
+                    <td name="tableCell" id="cell1"><img name="tImages" id="img1" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell2"><img name="tImages" id="img2" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell3"><img name="tImages" id="img3" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell4"><img name="tImages" id="img4" src="./sister-photos/0-cover.jpg"/></td>
                 </tr>
-                <tr id="row2">
-                    <td>Image 1</td>
-                    <td>Image 2</td>
-                    <td>Image 3</td>
-                    <td>Image 4</td>
+                <tr class="table" name="tablename" id="row2">
+                    <td name="tableCell" id="cell5"><img name="tImages" id="img5" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell6"><img name="tImages" id="img6" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell7"><img name="tImages" id="img7" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell8"><img name="tImages" id="img8" src="./sister-photos/0-cover.jpg"/></td>
                 </tr>
-                <tr id="row3">
-                    <td>Image 1</td>
-                    <td>Image 2</td>
-                    <td>Image 3</td>
-                    <td>Image 4</td>
+                <tr class="table" name="tablename" id="row3">
+                    <td name="tableCell" id="cell9"><img name="tImages" id="img9" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell10"><img name="tImages" id="img10" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell11"><img name="tImages" id="img11" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell12"><img name="tImages" id="img12" src="./sister-photos/0-cover.jpg"/></td>
                 </tr>
-                <tr id="row4">
-                    <td>Image 1</td>
-                    <td>Image 2</td>
-                    <td>Image 3</td>
-                    <td>Image 4</td>
+                <tr class="table" name="tablename" id="row4">
+                    <td name="tableCell" id="cell13"><img name="tImages" id="img13" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell14"><img name="tImages" id="img14" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell15"><img name="tImages" id="img15" src="./sister-photos/0-cover.jpg"/></td>
+                    <td name="tableCell" id="cell16"><img name="tImages" id="img16" src="./sister-photos/0-cover.jpg"/></td>
                 </tr>
             </table>
         </div>
